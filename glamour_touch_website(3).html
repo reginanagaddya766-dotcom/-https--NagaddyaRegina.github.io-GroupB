@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glamour Touch Unisex Salon</title>
+<style>
+:root{--pink:#d63384;--dark:#24151e;--cream:#fff8fb;--gold:#d6a84f}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#332630;background:var(--cream);line-height:1.6}
+header{background:var(--dark);color:white;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;position:sticky;top:0;z-index:10}
+.logo{font-size:1.35rem;font-weight:bold;color:#ffd3e8}.logo span{color:var(--gold)}
+nav{display:flex;gap:7px;flex-wrap:wrap}
+nav button{border:0;background:transparent;color:white;padding:9px 11px;cursor:pointer;border-radius:20px;font-weight:bold}
+nav button:hover,nav button.active{background:var(--pink)}
+.page{display:none;min-height:75vh}.page.active{display:block}
+.hero{min-height:520px;background:linear-gradient(90deg,rgba(25,10,20,.82),rgba(25,10,20,.25)),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=85') center/cover;display:flex;align-items:center;padding:60px 8%;color:white}
+.hero-content{max-width:650px}.eyebrow{color:#ffd3e8;text-transform:uppercase;letter-spacing:3px;font-weight:bold}
+h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.08;margin:12px 0}
+h2{font-size:2rem;color:var(--dark);margin-top:0}
+.hero p{font-size:1.15rem;max-width:560px}
+.btn{display:inline-block;background:var(--pink);color:white;border:0;padding:12px 22px;border-radius:25px;text-decoration:none;font-weight:bold;cursor:pointer;margin:8px 5px 0 0}
+.btn:hover{background:#a91f65}.outline{background:transparent;border:1px solid white}
+.container{max-width:1100px;margin:auto;padding:55px 6%}
+.intro{text-align:center;max-width:750px;margin:0 auto 30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 5px 20px #28102012}
+.card img{width:100%;height:190px;object-fit:cover;display:block}
+.card-body{padding:18px}.card h3{margin:0 0 7px;color:var(--pink)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.feature-img{width:100%;height:350px;object-fit:cover;border-radius:16px}
+ul{padding-left:22px}
+.team-card{text-align:center;padding-bottom:20px}
+.team-card img{height:240px}
+.team-card .role{color:var(--pink);font-weight:bold}
+.gallery img{height:230px}
+form{background:white;padding:25px;border-radius:15px;box-shadow:0 5px 20px #28102012;max-width:700px;margin:auto}
+label{display:block;font-weight:bold;margin:12px 0 5px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #ddcbd5;border-radius:8px;font:inherit}
+textarea{min-height:110px;resize:vertical}
+.contact-box{background:#f9e6ef;padding:25px;border-radius:14px}
+footer{background:var(--dark);color:#eee;text-align:center;padding:25px 5%}
+footer strong{color:#ffd3e8}
+@media(max-width:700px){header{justify-content:center}nav{justify-content:center}nav button{font-size:.82rem;padding:8px}.two-col{grid-template-columns:1fr}.hero{min-height:480px}.container{padding:40px 5%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">GLAMOUR <span>TOUCH</span></div>
+  <nav aria-label="Main navigation">
+    <button class="active" onclick="showPage('home',this)">Home</button>
+    <button onclick="showPage('about',this)">About</button>
+    <button onclick="showPage('services',this)">Services</button>
+    <button onclick="showPage('gallery',this)">Gallery</button>
+    <button onclick="showPage('team',this)">Our Team</button>
+    <button onclick="showPage('booking',this)">Booking</button>
+    <button onclick="showPage('contact',this)">Contact</button>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="page active">
+  <div class="hero"><div class="hero-content">
+    <div class="eyebrow">Beauty • Style • Confidence</div>
+    <h1>Discover Your Glamour</h1>
+    <p>Welcome to Glamour Touch Unisex Salon, where great style meets excellent care. Refresh your look and leave feeling confident.</p>
+    <button class="btn" onclick="showPage('booking')">Book an Appointment</button>
+    <button class="btn outline" onclick="showPage('services')">Explore Services</button>
+  </div></div>
+  <div class="container intro"><h2>Look Good. Feel Amazing.</h2><p>We offer hair, beauty and grooming services in a friendly and welcoming environment. Our goal is to give every client a beautiful experience.</p></div>
+  <div class="container">
+   <div class="intro"><div class="eyebrow">Our journey</div><h2>History of Glamour Touch</h2></div>
+   <div class="two-col">
+    <div>
+     <p>Glamour Touch Unisex Salon was founded in 2002. Since its establishment, the salon has served the beauty and grooming needs of both ladies and gentlemen, with a focus on helping clients look and feel their best.</p>
+     <p>The salon is located in Ntinda, Kampala, Uganda, on the New Side near the Post Office. Its location makes it a place where customers in Ntinda and the surrounding areas can visit for hair, beauty and grooming services.</p>
+     <p>This website was created to introduce Glamour Touch to customers online. It allows visitors to learn about the salon's history, explore services, view style inspiration, meet the website project team and make an appointment request.</p>
+    </div>
+    <div class="contact-box">
+     <h3>People Behind the Website</h3>
+     <p><strong>Mugula Daniel</strong> — Project team member</p>
+     <p><strong>Kiwanuka Peter</strong> — Project team member</p>
+     <p><strong>Nagaddya Regina</strong> — Project team member</p>
+     <p><small>These names identify the website project team; add each person's specific role if your coursework requires it.</small></p>
+    </div>
+   </div>
+  </div>
+</section>
+
+<section id="about" class="page">
+ <div class="container">
+  <div class="two-col">
+   <div><div class="eyebrow">Who we are</div><h2>About Glamour Touch</h2>
+    <p>Glamour Touch Unisex Salon is a beauty and grooming destination for both ladies and gentlemen. We believe that personal style is a way to express confidence and personality.</p>
+    <p>Our salon aims to provide quality services, a clean environment, friendly customer care and styles that suit each client.</p>
+    <ul><li>Friendly and professional service</li><li>Modern hairstyles and grooming</li><li>Clean and comfortable space</li><li>Customer satisfaction</li></ul>
+   </div>
+   <img class="feature-img" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=85" alt="Modern salon interior">
+  </div>
+ </div>
+</section>
+
+<section id="services" class="page">
+ <div class="container">
+  <div class="intro"><div class="eyebrow">What we do</div><h2>Our Services</h2><p>Choose a service and let our team give you a fresh, stylish look.</p></div>
+  <div class="cards">
+   <article class="card"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=85" alt="Hair styling"><div class="card-body"><h3>Hair Styling</h3><p>Beautiful everyday and special-occasion hairstyles.</p></div></article>
+   <article class="card"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=85" alt="Hair treatment"><div class="card-body"><h3>Hair Treatment</h3><p>Hair care treatments to help maintain healthy-looking hair.</p></div></article>
+   <article class="card"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=85" alt="Barber haircut"><div class="card-body"><h3>Barbering</h3><p>Haircuts, trimming and neat grooming for gentlemen.</p></div></article>
+   <article class="card"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=85" alt="Makeup beauty"><div class="card-body"><h3>Makeup</h3><p>Makeup looks for events, celebrations and everyday beauty.</p></div></article>
+   <article class="card"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=85" alt="Nail care"><div class="card-body"><h3>Manicure & Pedicure</h3><p>Nail cleaning, shaping and polish for a neat finish.</p></div></article>
+   <article class="card"><img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=85" alt="Beauty products"><div class="card-body"><h3>Beauty Care</h3><p>Personal care and beauty services to complete your look.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section id="gallery" class="page">
+ <div class="container">
+  <div class="intro"><div class="eyebrow">Our inspiration</div><h2>Style Gallery</h2><p>A collection of beauty, hair and grooming inspiration. Images are examples of styles.</p></div>
+  <div class="cards gallery">
+   <div class="card"><img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=800&q=85" alt="Hair style inspiration"></div>
+   <div class="card"><img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=800&q=85" alt="Beauty portrait"></div>
+   <div class="card"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=85" alt="Barber haircut"></div>
+   <div class="card"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=85" alt="Salon style example"></div>
+   <div class="card"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=85" alt="Beauty portrait"></div>
+   <div class="card"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=85" alt="Beauty portrait"></div>
+  </div>
+ </div>
+</section>
+
+<section id="team" class="page">
+ <div class="container">
+  <div class="intro"><div class="eyebrow">Meet the people</div><h2>Our Project Team</h2><p>The people behind the Glamour Touch website project.</p></div>
+  <div class="cards">
+   <article class="card team-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=85" alt="Portrait representing Mugula Daniel"><div class="card-body"><h3>Mugula Daniel</h3><div class="role">Website Project Member</div><p>Contributes to the planning and development of the website.</p></div></article>
+   <article class="card team-card"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=85" alt="Portrait representing Kiwanuka Peter"><div class="card-body"><h3>Kiwanuka Peter</h3><div class="role">Website Project Member</div><p>Contributes to the design and presentation of the website.</p></div></article>
+   <article class="card team-card"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=85" alt="Portrait representing Nagaddya Regina"><div class="card-body"><h3>Nagaddya Regina</h3><div class="role">Website Project Member</div><p>Contributes to the content and organization of the website.</p></div></article>
+  </div>
+  <p><small>Note: These are sample portrait photos, not verified photographs of the named team members. Replace them with your own photos if required.</small></p>
+ </div>
+</section>
+
+<section id="booking" class="page">
+ <div class="container">
+  <div class="intro"><div class="eyebrow">Plan your visit</div><h2>Book an Appointment</h2><p>Complete this form to prepare an appointment request.</p></div>
+  <form onsubmit="sendBooking(event)">
+   <label for="customer">Full Name</label><input id="customer" name="customer" required placeholder="Enter your full name">
+   <label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" required placeholder="Enter your phone number">
+   <label for="service">Choose a Service</label><select id="service" name="service" required><option value="">Select a service</option><option>Hair Styling</option><option>Hair Treatment</option><option>Barbering</option><option>Makeup</option><option>Manicure & Pedicure</option><option>Beauty Care</option></select>
+   <label for="date">Preferred Date</label><input id="date" name="date" type="date" required>
+   <label for="message">Extra Details</label><textarea id="message" name="message" placeholder="Tell us any special request"></textarea>
+   <button class="btn" type="submit">Submit Booking Request</button>
+   <p id="bookingMessage" aria-live="polite"></p>
+  </form>
+  <p class="intro"><small>Demo form: it displays your request on this device but does not send it to the salon. Connect it to a booking service or backend to receive real bookings.</small></p>
+ </div>
+</section>
+
+<section id="contact" class="page">
+ <div class="container">
+  <div class="intro"><div class="eyebrow">We would love to hear from you</div><h2>Contact Us</h2><p>Get in touch with Glamour Touch Unisex Salon for enquiries and appointments.</p></div>
+  <div class="two-col">
+   <div class="contact-box"><h3>Glamour Touch Unisex Salon</h3><p><strong>Phone:</strong> Add your salon phone number</p><p><strong>Email:</strong> Add your salon email address</p><p><strong>Location:</strong> Ntinda, Kampala, Uganda — New Side, near the Post Office</p><p><strong>Opening hours:</strong> Add your working days and hours</p></div>
+   <div><img class="feature-img" src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d3?auto=format&fit=crop&w=1000&q=85" alt="Salon styling station"><h3>Visit us</h3><p>We look forward to welcoming you. Please contact the salon to confirm service availability and appointment times.</p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <p><strong>GLAMOUR TOUCH UNISEX SALON</strong></p>
+ <p>Beauty • Style • Confidence</p>
+ <p>Website project team: Mugula Daniel | Kiwanuka Peter | Nagaddya Regina</p>
+ <small>&copy; <span id="year"></span> Glamour Touch. All rights reserved.</small>
+</footer>
+
+<script>
+function showPage(pageId, clickedButton){
+  document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+  const target = document.getElementById(pageId);
+  if(target) target.classList.add('active');
+  document.querySelectorAll('nav button').forEach(button => button.classList.remove('active'));
+  if(clickedButton) clickedButton.classList.add('active');
+  else {
+    const navButton = [...document.querySelectorAll('nav button')].find(button => button.getAttribute('onclick').includes("'" + pageId + "'"));
+    if(navButton) navButton.classList.add('active');
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function sendBooking(event){
+  event.preventDefault();
+  const name = document.getElementById('customer').value;
+  const service = document.getElementById('service').value;
+  document.getElementById('bookingMessage').textContent =
+    'Thank you, ' + name + '! Your ' + service + ' request has been prepared. Please contact the salon directly to confirm your appointment.';
+  event.target.reset();
+}
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
